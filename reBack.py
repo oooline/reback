@@ -223,6 +223,11 @@ class dbs():
         #update end
         fnum = dbs.ex_backup_fnum()
         backui.logs('<p style="color:#f00;">*** 备份已完成 (%s)</p>'%(fnum))
+        #backup sqlite
+        dbfile = os.path.join(os.getcwd(), 'reBack.sqlite')
+        bsfile = os.path.join(backup, 'reBack.sqlite'+time.strftime('_%Y%m%d-%H%M%S'))
+        shutil.copy(dbfile, bsfile)
+        #print log
         if dbs.redirs:
             for key in dbs.redirs:
                 fstr = '--------------------------------------------------------<br>'
@@ -391,6 +396,7 @@ class dbs():
                             else:
                                 dbs.redirs[md5] = []
                                 dbs.redirs[md5].append(res[0][1])
+                                dbs.redirs[md5].append(file2)
                             continue
                         else:
                             db.execute("replace into %s values (?,?,?)"%(dbname), (md5, file2, 0))
