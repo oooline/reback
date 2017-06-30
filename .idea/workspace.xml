@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae0f38b9-9097-4986-be36-89c60ab629f0" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/reBack.py" afterPath="$PROJECT_DIR$/reBack.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/win.py" afterPath="$PROJECT_DIR$/win.py" />
     </list>
     <ignored path="reBack.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -23,7 +23,7 @@
     <SUITE FILE_PATH="coverage/reBack$testui.coverage" NAME="testui Coverage Results" MODIFIED="1478186468165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/reBack$Unnamed.coverage" NAME="Unnamed Coverage Results" MODIFIED="1479698138478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/reBack$zhuce.coverage" NAME="zhuce Coverage Results" MODIFIED="1477790659687" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/reback$reBack.coverage" NAME="reBack Coverage Results" MODIFIED="1498800128131" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/reback$reBack.coverage" NAME="reBack Coverage Results" MODIFIED="1498813358873" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/reBack$untitledimg.coverage" NAME="untitledimg Coverage Results" MODIFIED="1477755092783" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -34,16 +34,14 @@
     <favorites_list name="reBack" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
       <file leaf-file-name="reBack.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/reBack.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-58">
-              <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+            <state relative-caret-position="300">
+              <caret line="365" column="27" selection-start-line="365" selection-start-column="27" selection-end-line="365" selection-end-column="27" />
               <folding>
                 <element signature="e#14#23#0" expanded="true" />
-                <element signature="e#379#5889#0" expanded="false" />
-                <element signature="e#406#2237#0" expanded="false" />
                 <element signature="e#2267#2383#0" expanded="false" />
                 <element signature="e#2415#3794#0" expanded="false" />
                 <element signature="e#3826#4233#0" expanded="false" />
@@ -54,32 +52,29 @@
                 <element signature="e#5013#5096#0" expanded="false" />
                 <element signature="e#5131#5495#0" expanded="false" />
                 <element signature="e#5528#5889#0" expanded="false" />
-                <element signature="e#5929#7314#0" expanded="false" />
-                <element signature="e#7460#9827#0" expanded="false" />
                 <element signature="e#9861#10036#0" expanded="false" />
                 <element signature="e#10065#10107#0" expanded="false" />
                 <element signature="e#10154#10536#0" expanded="false" />
                 <element signature="e#10570#10830#0" expanded="false" />
                 <element signature="e#10864#11087#0" expanded="false" />
                 <element signature="e#11121#11344#0" expanded="false" />
-                <element signature="e#14110#14214#0" expanded="false" />
-                <element signature="e#14244#14553#0" expanded="false" />
-                <element signature="e#14588#14837#0" expanded="false" />
-                <element signature="e#14876#16828#0" expanded="false" />
-                <element signature="e#16862#17675#0" expanded="false" />
-                <element signature="e#17708#17838#0" expanded="false" />
-                <marker date="1498800127131" expanded="true" signature="8067:8106" ph="update dirs " />
-                <marker date="1498800127131" expanded="true" signature="8152:8191" ph="update dirs " />
-                <marker date="1498800127131" expanded="true" signature="10254:10399" ph="create table... if" />
-                <marker date="1498800127131" expanded="true" signature="10697:10728" ph="select * fro... dirs" />
-                <marker date="1498800127131" expanded="true" signature="10936:10963" ph="drop table i... " />
-                <marker date="1498800127131" expanded="true" signature="10986:11085" ph="create table... if" />
-                <marker date="1498800127131" expanded="true" signature="11193:11220" ph="drop table i... " />
-                <marker date="1498800127131" expanded="true" signature="11243:11342" ph="create table... if" />
-                <marker date="1498800127131" expanded="false" signature="11364:14081" ph="..." />
-                <marker date="1498800127131" expanded="true" signature="11442:11462" ph="select * fro... diraaa" />
-                <marker date="1498800127131" expanded="true" signature="11515:11535" ph="select * fro... dirbbb" />
-                <marker date="1498800127131" expanded="true" signature="15665:15700" ph="select * fro... diraaa" />
+                <element signature="e#14147#14251#0" expanded="false" />
+                <element signature="e#14281#14590#0" expanded="false" />
+                <element signature="e#14625#14874#0" expanded="false" />
+                <element signature="e#14913#16865#0" expanded="false" />
+                <element signature="e#16899#17712#0" expanded="false" />
+                <element signature="e#17745#17875#0" expanded="false" />
+                <marker date="1498812975645" expanded="true" signature="8067:8106" ph="update dirs " />
+                <marker date="1498812975645" expanded="true" signature="8152:8191" ph="update dirs " />
+                <marker date="1498812975645" expanded="true" signature="10254:10399" ph="create table... if" />
+                <marker date="1498812975645" expanded="true" signature="10697:10728" ph="select * fro... dirs" />
+                <marker date="1498812975645" expanded="true" signature="10936:10963" ph="drop table i... " />
+                <marker date="1498812975645" expanded="true" signature="10986:11085" ph="create table... if" />
+                <marker date="1498812975645" expanded="true" signature="11193:11220" ph="drop table i... " />
+                <marker date="1498812975645" expanded="true" signature="11243:11342" ph="create table... if" />
+                <marker date="1498812975645" expanded="true" signature="11442:11462" ph="select * fro... diraaa" />
+                <marker date="1498812975645" expanded="true" signature="11515:11535" ph="select * fro... dirbbb" />
+                <marker date="1498812975645" expanded="true" signature="15702:15737" ph="select * fro... diraaa" />
               </folding>
             </state>
           </provider>
@@ -113,8 +108,8 @@
         <option value="$PROJECT_DIR$/selectfile.py" />
         <option value="$PROJECT_DIR$/windows.py" />
         <option value="$PROJECT_DIR$/del/win2.py" />
-        <option value="$PROJECT_DIR$/win.py" />
         <option value="$PROJECT_DIR$/reBack.py" />
+        <option value="$PROJECT_DIR$/win.py" />
       </list>
     </option>
   </component>
@@ -183,8 +178,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -568,9 +563,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14322917" sideWeight="0.48809522" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14322917" sideWeight="0.48809522" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2736264" sideWeight="0.4945415" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -722,20 +717,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/win.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="117" column="13" selection-start-line="117" selection-start-column="13" selection-end-line="117" selection-end-column="13" />
+        <state relative-caret-position="475">
+          <caret line="41" column="58" selection-start-line="41" selection-start-column="58" selection-end-line="41" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/reBack.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-58">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
+        <state relative-caret-position="300">
+          <caret line="365" column="27" selection-start-line="365" selection-start-column="27" selection-end-line="365" selection-end-column="27" />
           <folding>
             <element signature="e#14#23#0" expanded="true" />
-            <element signature="e#379#5889#0" expanded="false" />
-            <element signature="e#406#2237#0" expanded="false" />
             <element signature="e#2267#2383#0" expanded="false" />
             <element signature="e#2415#3794#0" expanded="false" />
             <element signature="e#3826#4233#0" expanded="false" />
@@ -746,32 +739,29 @@
             <element signature="e#5013#5096#0" expanded="false" />
             <element signature="e#5131#5495#0" expanded="false" />
             <element signature="e#5528#5889#0" expanded="false" />
-            <element signature="e#5929#7314#0" expanded="false" />
-            <element signature="e#7460#9827#0" expanded="false" />
             <element signature="e#9861#10036#0" expanded="false" />
             <element signature="e#10065#10107#0" expanded="false" />
             <element signature="e#10154#10536#0" expanded="false" />
             <element signature="e#10570#10830#0" expanded="false" />
             <element signature="e#10864#11087#0" expanded="false" />
             <element signature="e#11121#11344#0" expanded="false" />
-            <element signature="e#14110#14214#0" expanded="false" />
-            <element signature="e#14244#14553#0" expanded="false" />
-            <element signature="e#14588#14837#0" expanded="false" />
-            <element signature="e#14876#16828#0" expanded="false" />
-            <element signature="e#16862#17675#0" expanded="false" />
-            <element signature="e#17708#17838#0" expanded="false" />
-            <marker date="1498800127131" expanded="true" signature="8067:8106" ph="update dirs " />
-            <marker date="1498800127131" expanded="true" signature="8152:8191" ph="update dirs " />
-            <marker date="1498800127131" expanded="true" signature="10254:10399" ph="create table... if" />
-            <marker date="1498800127131" expanded="true" signature="10697:10728" ph="select * fro... dirs" />
-            <marker date="1498800127131" expanded="true" signature="10936:10963" ph="drop table i... " />
-            <marker date="1498800127131" expanded="true" signature="10986:11085" ph="create table... if" />
-            <marker date="1498800127131" expanded="true" signature="11193:11220" ph="drop table i... " />
-            <marker date="1498800127131" expanded="true" signature="11243:11342" ph="create table... if" />
-            <marker date="1498800127131" expanded="false" signature="11364:14081" ph="..." />
-            <marker date="1498800127131" expanded="true" signature="11442:11462" ph="select * fro... diraaa" />
-            <marker date="1498800127131" expanded="true" signature="11515:11535" ph="select * fro... dirbbb" />
-            <marker date="1498800127131" expanded="true" signature="15665:15700" ph="select * fro... diraaa" />
+            <element signature="e#14147#14251#0" expanded="false" />
+            <element signature="e#14281#14590#0" expanded="false" />
+            <element signature="e#14625#14874#0" expanded="false" />
+            <element signature="e#14913#16865#0" expanded="false" />
+            <element signature="e#16899#17712#0" expanded="false" />
+            <element signature="e#17745#17875#0" expanded="false" />
+            <marker date="1498812975645" expanded="true" signature="8067:8106" ph="update dirs " />
+            <marker date="1498812975645" expanded="true" signature="8152:8191" ph="update dirs " />
+            <marker date="1498812975645" expanded="true" signature="10254:10399" ph="create table... if" />
+            <marker date="1498812975645" expanded="true" signature="10697:10728" ph="select * fro... dirs" />
+            <marker date="1498812975645" expanded="true" signature="10936:10963" ph="drop table i... " />
+            <marker date="1498812975645" expanded="true" signature="10986:11085" ph="create table... if" />
+            <marker date="1498812975645" expanded="true" signature="11193:11220" ph="drop table i... " />
+            <marker date="1498812975645" expanded="true" signature="11243:11342" ph="create table... if" />
+            <marker date="1498812975645" expanded="true" signature="11442:11462" ph="select * fro... diraaa" />
+            <marker date="1498812975645" expanded="true" signature="11515:11535" ph="select * fro... dirbbb" />
+            <marker date="1498812975645" expanded="true" signature="15702:15737" ph="select * fro... diraaa" />
           </folding>
         </state>
       </provider>

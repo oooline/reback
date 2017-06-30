@@ -364,12 +364,11 @@ class dbs():
 
         #del bDict file
         dbs.delfiles = bDict
-        '''
-        for key in bDict:
-            print('Del: **** %s'%(bDict[key]))
-            if os.path.isfile(bDict[key]):
-                os.remove(bDict[key])
-        '''
+        if not rWindow.delBack.isChecked():
+            for key in bDict:
+                #print('Del: **** %s'%(bDict[key]))
+                if os.path.isfile(bDict[key]):
+                    os.remove(bDict[key])
     def ex_sdirs():
         fnum = 0
         for dir in dbs.sdirs:
