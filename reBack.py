@@ -7,6 +7,7 @@ import shutil
 import sys
 import json
 import threading
+import subprocess
 #gui
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QFileDialog
@@ -155,8 +156,11 @@ class backui():
         open = QFileDialog()
         rWindow.path = open.getExistingDirectory().replace("/", "\\")
         if rWindow.path:
-            backui.logs('已选择存储目录: %s'%(rWindow.path))
-            rWindow.backPath.setText(rWindow.path)
+            if os.path.dirname(rWindow.path)==rWindow.path:
+                backui.msg('Warning', '存储位置必须指定一个目录.')
+            else:
+                rWindow.backPath.setText(rWindow.path)
+                backui.logs('已选择存储目录: %s'%(rWindow.path))
 
 class myBackup(threading.Thread):
     def run(self):
@@ -196,6 +200,7 @@ class dbs():
     sdirs = []
     backup = ''
     redirs = {}
+    delfiles = {}
     def toBackup(dbfile, sdirs, backup):
         global backStatus
         dbs.sdirs = sdirs
@@ -224,20 +229,40 @@ class dbs():
         fnum = dbs.ex_backup_fnum()
         backui.logs('<p style="color:#f00;">*** 备份已完成 (%s)</p>'%(fnum))
         #backup sqlite
+        dates = time.strftime('%Y%m%d-%H%M%S_')
+        logdir = os.path.join(os.path.dirname(backup), '000Logs')
+        if not os.path.isdir(logdir):
+            os.mkdir(logdir)
         dbfile = os.path.join(os.getcwd(), 'reBack.sqlite')
-        bsfile = os.path.join(backup, 'reBack.sqlite'+time.strftime('_%Y%m%d-%H%M%S'))
-        shutil.copy(dbfile, bsfile)
+        bsfile = os.path.join(logdir, dates + 'reBack.sqlite')
+        dblog  = os.path.join(os.getcwd(), dates + 'reBack.log')
+        bslog  = os.path.join(logdir, dates + 'reBack.log')
+        shutil.copy2(dbfile, bsfile)
         #print log
+        fstr = ''
         if dbs.redirs:
             for key in dbs.redirs:
-                fstr = '--------------------------------------------------------<br>'
+                fstr = fstr + '--------------------------------------------------------\n'
                 fnum = len(dbs.redirs[key])
                 fstr = fstr + '重复文件(%s):'%(fnum)
                 for fkey in dbs.redirs[key]:
-                    fstr = fstr + '<br>' + fkey
-                backui.logs('%s'%fstr)
-        #x = rWindow.textBrowser.toHtml()
-        #print(x)
+                    fstr = fstr + '\n' + fkey
+        if dbs.delfiles:
+            fstr = fstr + '\n\n--------------------------------------------------------\n'
+            fstr = fstr + '备份盘未清理文件(%s):'%(len(dbs.delfiles))
+            for key in dbs.delfiles:
+                #print(type(dbs.delfiles[key]))
+                fstr = fstr + '\n' + dbs.delfiles[key]
+
+        #backui.logs('%s'%fstr)
+        f = open(dblog, 'a')
+        f.write(fstr)
+        f.close()
+        shutil.copy2(dblog, bslog)
+        backui.logs('*** 日志已保存 (%s)'%(dblog))
+        subprocess.call('notepad %s' %(dblog))
+
+        #print(rWindow.textBrowser.toHtml())
     def db_init(dbfile):
         dbfile = dbfile.replace('\\', '/')
         #if os.path.isfile(dbfile):
@@ -323,10 +348,10 @@ class dbs():
             else:
                 print('Copy File %s'%(newname))
                 # 如果b表没有, 则a表copy过去，更新times
-                if os.path.isfile(newname):
-                    backui.logs('<p style="color:#f00;">*** 备份盘文件重复: %s</p>'%(newname))
-                else:
-                    shutil.copy(res_a[i][1], newpath)
+                #if os.path.isfile(newname):
+                #    backui.logs('<p style="color:#f00;">*** 备份盘文件重复: %s</p>'%(newname))
+                #else:
+                shutil.copy2(res_a[i][1], newpath)
                 #update db
                 md = hashlib.md5()
                 md_file = open(newname, 'rb')
@@ -338,6 +363,7 @@ class dbs():
         #dbs.dbcon.close()
 
         #del bDict file
+        dbs.delfiles = bDict
         '''
         for key in bDict:
             print('Del: **** %s'%(bDict[key]))
@@ -423,7 +449,7 @@ class dbs():
             m.update(md_file.read(8192))
             md_file.close()
             m.update( str(fsize).encode('utf-8') )
-            m.update( str(os.path.getmtime(fname)).encode('utf-8') )
+            m.update( str(os.path.getmtime(fname)).encode('utf-8') ) #!!!
             md5 = m.hexdigest()
             return md5
         else:
