@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="del">
+    <file>image/addfile.png</file>
+    <file>image/x64x2.png</file>
+    <file>image/x64x.png</file>
+    <file>image/del64x.png</file>
+  </qresource>
+</RCC>
